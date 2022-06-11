@@ -5,7 +5,7 @@
 
 // export const productosContext = createContext();
 
-// const ItemProvider = (children) => {
+// export const ItemProvider = (children) => {
 
 //   const [productos, setProductos] = useState([]);
 
@@ -23,7 +23,6 @@
 //     getProductos();
 //   }, []);
 
-// console.log(productos)
 
 //   return (
 //     <productosContext.Provider value={[productos, setProductos]}>
@@ -32,4 +31,4 @@
 //   )
 // }
 
-// export default ItemProvider;
+

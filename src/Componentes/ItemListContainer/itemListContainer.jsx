@@ -5,13 +5,14 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 
 
 const ItemListContainer = (prop) => {
 
 
     return (
-      <Card sx={{ maxWidth: 600 }} key={prop.id}>
+      <Card sx={{ maxWidth: 600 }} key={prop.id} className="mb-5">
         <CardMedia
           component="img"
           alt="green iguana"
@@ -27,8 +28,7 @@ const ItemListContainer = (prop) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Share</Button>
-          <Button size="small">Learn More</Button>
+         <Link to={`/detalles/${prop.id}`}> <Button size="small">Detalles</Button></Link>
         </CardActions>
       </Card>
     );

@@ -8,7 +8,7 @@ import "./Navbar.scss";
 
 function Navbar() {
   return (
-    <div className='divNavbar d-flex justify-content-between align-items-center'>
+    <div className='divNavbar d-flex justify-content-between align-items-center mb-5'>
         <div>
             <img src={logo} alt="" className='logoNavbar' />
         </div>

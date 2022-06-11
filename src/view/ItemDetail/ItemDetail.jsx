@@ -1,12 +1,10 @@
+import React, {useParams, useState,useEffect} from 'react';
 import { db } from "../../Firebase/Firebase";
 import { collection, query, getDocs } from "firebase/firestore";
-import React, { useState, useEffect } from "react";
-import ItemListContainer from '../ItemListContainer/itemListContainer';
 
 
+function ItemDetail() {
 
-
-function ItemList() {
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
@@ -23,11 +21,10 @@ function ItemList() {
         getProductos();
       }, []);
 
+
   return (
-   productos.map((el) => {
-    return(
-     <ItemListContainer nombre={el.nombre} descripcion={el.descripcion} imagen={el.imagen} id={el.id} className="mb-3"/>)})
+    <div>ItemDetail</div>
   )
 }
 
-export default ItemList
+export default ItemDetail
