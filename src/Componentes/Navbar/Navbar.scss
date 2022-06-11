@@ -1,0 +1,25 @@
+.divNavbar{
+    // background-image: url("../../assets/img/Artboard1.png");
+    background-size: 100vw;
+    background-color: black;
+    .logoNavbar{
+        width: 70px;
+        margin: 0.5rem;
+    }
+
+    .carritoNavbar{
+        width: 30px;
+        margin: 0 3rem;
+    }
+.listaNavbar{
+margin-top: 1rem;
+
+   .liNavbar{
+       margin: 0 4rem;
+       list-style: none;
+       font-size: large;
+       color: white;
+       text-decoration: none;
+   }
+}
+}
