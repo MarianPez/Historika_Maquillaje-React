@@ -1,11 +1,16 @@
-import React, {useParams, useState,useEffect} from 'react';
+import React, {useState,useEffect} from 'react';
+import { useParams } from 'react-router-dom';
 import { db } from "../../Firebase/Firebase";
-import { collection, query, getDocs } from "firebase/firestore";
+import { collection, query, getDocs, where } from "firebase/firestore";
+import ItemDetailContainer from '../../Componentes/ItemDetailContainer/ItemDetailContainer';
 
 
 function ItemDetail() {
 
     const [productos, setProductos] = useState([]);
+    let {id} = useParams();
+
+  
 
     useEffect(() => {
         const getProductos = async () => {
@@ -16,14 +21,28 @@ function ItemDetail() {
             docs.push({ ...doc.data(), id: doc.id });
           });
           setProductos(docs);
+
+
+
         };
       
         getProductos();
-      }, []);
+
+
+      }, [id]);
+
+let elemento = productos.filter((el) => el.id == id) 
+
 
 
   return (
-    <div>ItemDetail</div>
+    elemento.map((el) =>{
+        return(
+<div>
+    <ItemDetailContainer nombre={el.nombre} descripcion={el.descripcion} precio={el.precio} imagen={el.imagen}></ItemDetailContainer>
+    </div>
+    )
+    })
   )
 }
 

@@ -1,0 +1,31 @@
+.divImagenDetail{
+
+    .imagenDetail{
+        width: 40rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+
+    }
+}
+
+.divTexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    margin-right: 14rem;
+
+    .nombreDetail{
+        font-size: 3rem;
+    }
+
+    .descripcionDetail{
+        font-size: x-large;
+        font-weight: 500;
+    }
+
+    .precioDetail{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
