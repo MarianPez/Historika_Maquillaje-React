@@ -26,7 +26,7 @@ function ItemList() {
   return (
    productos.map((el) => {
     return(
-     <ItemListContainer nombre={el.nombre} descripcion={el.descripcion} imagen={el.imagen} id={el.id} className="mb-3"/>)})
+     <ItemListContainer nombre={el.nombre} descripcion={el.descripcion} imagen={el.imagen} id={el.id} stock={el.stock} className="mb-3"/>)})
   )
 }
 

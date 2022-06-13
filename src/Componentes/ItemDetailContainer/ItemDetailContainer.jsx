@@ -1,5 +1,6 @@
 import React from 'react';
-import "./ItemDetail.scss"
+import "./ItemDetail.scss";
+import Contador from '../../List/Contador/Contador';
 
 function ItemDetailContainer(props) {
   return (
@@ -11,6 +12,7 @@ function ItemDetailContainer(props) {
         <h1 className='nombreDetail'>{props.nombre}</h1>
         <h2 className='descripcionDetail'>{props.descripcion}</h2>
         <p className='precioDetail'>{props.precio}$</p>
+        <Contador stock={props.stock}></Contador>
         </div>
     </div>
   )

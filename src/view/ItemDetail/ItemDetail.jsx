@@ -39,7 +39,7 @@ let elemento = productos.filter((el) => el.id == id)
     elemento.map((el) =>{
         return(
 <div>
-    <ItemDetailContainer nombre={el.nombre} descripcion={el.descripcion} precio={el.precio} imagen={el.imagen}></ItemDetailContainer>
+    <ItemDetailContainer nombre={el.nombre} descripcion={el.descripcion} precio={el.precio} imagen={el.imagen} stock={el.stock}></ItemDetailContainer>
     </div>
     )
     })
