@@ -6,13 +6,13 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
-
+import "./itemListContainer.scss"
 
 const ItemListContainer = (prop) => {
 
 
     return (
-      <Card sx={{ maxWidth: 600 }} key={prop.id} className="mb-5">
+      <Card sx={{ maxWidth: 600 }} key={prop.id} className="mb-5 card">
         <CardMedia
           component="img"
           alt="green iguana"

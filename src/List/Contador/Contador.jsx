@@ -1,11 +1,14 @@
 import React, {useState} from 'react';
-import "./Contador.scss"
+import "./Contador.scss";
+import {Button} from "@mui/material";
+import {Link} from "react-router-dom"
+
 
 function Contador(props) {
-
-const [numero, setNumero] = useState(0)
-const [bool, setBool] = useState(false)
-const [bool2, setBool2] = useState(true)
+const [numero, setNumero] = useState(0);
+const [bool, setBool] = useState(false);
+const [bool2, setBool2] = useState(true);
+const [bool3, setBool3] = useState(false)
 
 const sumar = () => {
 
@@ -22,6 +25,7 @@ const restar = () => {
 }
 
   return (
+    <div>
     <div className='d-flex justify-content-around'>
     <button onClick={() => 
       restar()
@@ -33,6 +37,17 @@ const restar = () => {
      sumar()
       } className="botonesContador" disabled={bool}> + </button>
     </div>
+    <Button className='boton' variant="contained" disableElevation onClick={() => {
+      props.onAdd(numero)
+      setNumero(0)
+      setBool3(true)
+    }}>
+    Comprar
+  </Button>
+  {bool3 && <Link to="/carrito"> <Button className='boton' variant="contained" disableElevation>
+   Carrito
+  </Button></Link>}
+  </div>
   )
 }
 
