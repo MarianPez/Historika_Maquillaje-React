@@ -38,8 +38,7 @@ const agregarAlCarrito = (props) => {
       setCart([...cart, elemento]);
     }
 
-
-    console.log(cart)
+    
   };
 
   return (

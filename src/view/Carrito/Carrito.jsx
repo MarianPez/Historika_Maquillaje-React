@@ -1,32 +1,18 @@
 import React, {useContext} from 'react';
 import {CartContext} from "../../List/CartContext/CartContext";
 import "./Carrito.scss";
-import Contador from '../../List/Contador/Contador';
 
 function Carrito() {
-    const {cart, setCart, agregarAlCarrito} = useContext(CartContext);
+    const {cart} = useContext(CartContext);
 
-    // const onAdd = (numero) => {
-
-    //     let elemento = {
-    //       nombre: props.nombre,
-    //       precio: props.precio,
-    //       id: props.id,
-    //       imagen: props.imagen,
-    //       descripcion: props.descripcion,
-    //       cantidad: numero
-    //     }
-      
-      
-    //   agregarAlCarrito(elemento)
-      
-      
-    //   }
+     
       
       
 
   return (
-    cart.map((el) => {
+    <div>
+      <h1 className='text-center tituloDetail'>Confirmar compra</h1>
+   { cart.map((el) => {
         return(
             <div className="d-flex justify-content-around">
             <div className="divImagenDetail">
@@ -35,14 +21,17 @@ function Carrito() {
             <div className="divTexto">
               <h1 className="nombreDetail">{el.nombre}</h1>
               <h2 className="descripcionDetail">{el.descripcion}</h2>
+              <div className='d-flex justify-content-between'>
+                <p className='unidadesDetail'>{el.cantidad} unidades</p>
               <p className="precioDetail">{el.precio}$</p>
-              <Contador stock={el.stock}></Contador>
+              </div>
               
             </div>
           </div>
         )
         
-    })
+    })}
+    </div>
   )
 }
 

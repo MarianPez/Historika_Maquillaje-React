@@ -1,32 +1,18 @@
-import { db } from "../../Firebase/Firebase";
-import { collection, query, getDocs } from "firebase/firestore";
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import ItemListContainer from '../ItemListContainer/itemListContainer';
-
+import { productosContext } from "../../ItemContext/ItemContext";
 
 
 
 function ItemList() {
-    const [productos, setProductos] = useState([]);
+    const [productos] = useContext(productosContext);
 
-    useEffect(() => {
-        const getProductos = async () => {
-          const q = query(collection(db, "productos"));
-          const docs = [];
-          const querySnapshot = await getDocs(q);
-          querySnapshot.forEach((doc) => {
-            docs.push({ ...doc.data(), id: doc.id });
-          });
-          setProductos(docs);
-        };
-      
-        getProductos();
-      }, []);
+  
 
   return (
    productos.map((el) => {
     return(
-     <ItemListContainer nombre={el.nombre} descripcion={el.descripcion} imagen={el.imagen} id={el.id}  className="mb-3"/>)})
+     <ItemListContainer key={el.id} nombre={el.nombre} descripcion={el.descripcion} imagen={el.imagen} id={el.id}  className="mb-3"/>)})
   )
 }
 
