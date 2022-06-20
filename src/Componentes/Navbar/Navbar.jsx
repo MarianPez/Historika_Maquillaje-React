@@ -22,7 +22,7 @@ function Navbar() {
     setAnchorEl(null);
   };
 
-console.log(widget)
+
 
   return (
     <div className='divNavbar d-flex justify-content-between align-items-center mb-5'>
@@ -59,8 +59,10 @@ console.log(widget)
           <Link key={4} className="liNavbar" to="/compras">Compra</Link>
         </ul>
         <div>
+          <Link to="/carrito">
           <img src={carrito} alt=""  className='carritoNavbar'/>
-          {widget != 0 && <p className='widget'>{widget}</p>}
+          {widget !== 0 && <p className='widget'>{widget}</p>}
+          </Link>
         </div>
     </div>
   )

@@ -12,13 +12,14 @@ import {Link} from "react-router-dom"
 
 function Categorias() {
   const identificador = useParams();
+  let id = identificador.id
   const [elementos, setElementos] = useState([]);
 
   useEffect(() => {
     const getDocumentos = async () => {
       const q = query(
         collection(db, "productos"),
-        where("categoria", "==", identificador.id)
+        where("categoria", "==", id)
       );
       const elemento = [];
       const querySnapshot = await getDocs(q);
@@ -30,12 +31,12 @@ function Categorias() {
     };
     
     getDocumentos();
-  }, []);
+  }, [id]);
 
 
 
   return (
-    <div className="d-flex justify-content-around">
+ <div className="d-flex justify-content-around flex-wrap">
 {elementos.map((el) => {
     return(
     <Card sx={{ maxWidth: 900}} key={el.id} className="mb-5 card">
@@ -57,6 +58,7 @@ function Categorias() {
      <Link to={`/detalles/${el.id}`}> <Button size="small">Detalles</Button></Link>
     </CardActions>
   </Card>
+  
   )
 })}
 </div>)
