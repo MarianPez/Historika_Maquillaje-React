@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2? family= Ubuntu:wght@300;400 & display=swap');
+
+
 .divNavbar{
-    // background-image: url("../../assets/img/Artboard1.png");
     background-size: 100vw;
     background-color: black;
+
+    #basic-button{
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+        text-transform: none;
+        font-size: larger;
+        margin: 0 4rem;
+
+      
+    }
+
     .logoNavbar{
-        width: 70px;
+        width: 100px;
         margin: 0.5rem;
     }
 
@@ -17,10 +30,17 @@ margin-top: 1rem;
    .liNavbar{
        margin: 0 4rem;
        list-style: none;
-       font-size: large;
+       font-size: larger;
        color: white;
        text-decoration: none;
    }
+
+
+}
+
+#liNavbar{
+    color: white;
+    text-decoration: none;
 }
 
 .widget{
@@ -31,4 +51,10 @@ margin-top: 1rem;
     width: 20px;
     text-align: center;
 }
+}
+
+
+#desplegable1, #desplegable2, #desplegable3, #desplegable4, #desplegable5{
+    color: black;
+    text-decoration: none;
 }

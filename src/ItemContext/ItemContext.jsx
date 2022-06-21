@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import { db } from "../Firebase/Firebase";
 import { collection, query, getDocs } from "firebase/firestore";
+import Spinner from "../List/Spinner/Spinner";
 
 
 export const productosContext = createContext();

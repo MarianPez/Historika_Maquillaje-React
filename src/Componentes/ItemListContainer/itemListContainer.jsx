@@ -12,23 +12,26 @@ const ItemListContainer = (prop) => {
 
 
     return (
-      <Card sx={{ maxWidth: 600 }} key={prop.id} className="mb-5 card">
-        <CardMedia
-          component="img"
-          alt="green iguana"
-          height="300"
-          image={prop.imagen}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+      <Card sx={{ maxWidth: 800 }} key={prop.id} className="mb-5 card">
+          <CardContent className="text-center">
+          <Typography gutterBottom variant="h5" component="div" className="tituloHome">
             {prop.nombre}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" className="descripcion">
             {prop.descripcion}
           </Typography>
         </CardContent>
-        <CardActions>
-         <Link to={`/detalles/${prop.id}`}> <Button size="small">Detalles</Button></Link>
+        <CardMedia
+          component="img"
+          alt="green iguana"
+          height="400"
+          image={prop.imagen}
+        />
+      
+        <CardActions className="align-self-center cardLink">
+         <Link to={`/detalles/${prop.id}`} className="linkHome">
+           <Button variant="contained" disableElevation size="small" id="botonHome">Detalles</Button>
+           </Link>
         </CardActions>
       </Card>
     );

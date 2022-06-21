@@ -48,20 +48,21 @@ function Navbar() {
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
+  
       >
-        <MenuItem onClick={handleClose}> <Link to={`categoria/lipstick`}> Pintalabios</Link></MenuItem>
-        <MenuItem onClick={handleClose}> <Link to={`categoria/baseSolida`}> Bases Solidas</Link></MenuItem>
-        <MenuItem onClick={handleClose}> <Link to={`categoria/baseLiquida`}> Bases liquidas</Link></MenuItem>
-        <MenuItem onClick={handleClose}> <Link to={`categoria/eyeliner`}> Delineador</Link></MenuItem>
-        <MenuItem onClick={handleClose}> <Link to={`categoria/sombras`}> Sombras</Link></MenuItem>
+        <MenuItem onClick={handleClose}> <Link to={`categoria/lipstick`} id="desplegable1"> Pintalabios</Link></MenuItem>
+        <MenuItem onClick={handleClose}> <Link to={`categoria/baseSolida`} id="desplegable2"> Bases Solidas</Link></MenuItem>
+        <MenuItem onClick={handleClose}> <Link to={`categoria/baseLiquida`} id="desplegable3"> Bases liquidas</Link></MenuItem>
+        <MenuItem onClick={handleClose}> <Link to={`categoria/eyeliner`} id="desplegable4"> Delineador</Link></MenuItem>
+        <MenuItem onClick={handleClose}> <Link to={`categoria/sombras`} id="desplegable5"> Sombras</Link></MenuItem>
       </Menu>
           <li key={3} className="liNavbar">Nuestra historia</li>
           <Link key={4} className="liNavbar" to="/compras">Compra</Link>
         </ul>
         <div>
-          <Link to="/carrito">
+          <Link to="/carrito" id="liNavbar">
           <img src={carrito} alt=""  className='carritoNavbar'/>
-          {widget !== 0 && <p className='widget'>{widget}</p>}
+          {widget !== 0 && <p className='widget' id='widget' >{widget}</p>}
           </Link>
         </div>
     </div>

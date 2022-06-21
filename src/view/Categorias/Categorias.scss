@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
 
-.card{
+
+.cardCategorias{
     margin-right: 5vw;
     
 
-    .tituloHome{
+    .tituloCategorias{
         font-weight: 600;
         font-family: 'Ubuntu', sans-serif;
     }
 
-    .descripcion{
+    .descripcionCategorias{
         font-weight: 300;
         font-size: 1rem;
         color: black;
@@ -18,12 +19,12 @@
 
     
 
-    .linkHome{
+    .linkCategorias{
 
         text-decoration: none;
        
        
-       #botonHome{
+       #botonCategorias{
            background-color: #FF6699;
            color: white;
            font-size: medium;
@@ -34,3 +35,7 @@
        }
 
 }
+
+.spinnerCategorias{
+    height: 70vh;
+   }

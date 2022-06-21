@@ -1,7 +1,16 @@
-.tituloDetail{
+.tituloDetailCarrito{
     font-size: 3rem;
-    text-decoration: underline;
+    font-weight: 600;
 }
+
+.opcion2Carrito{
+    font-size: 3rem;
+    padding-top: 25vh;
+    height: 65vh;
+    text-align: center;
+}
+
+
 
 .divImagenDetail{
 
@@ -13,12 +22,17 @@
     }
 }
 
-.divTexto{
+.divExtra{
+    height: 60vh;
+}
+
+.divTextoCarrito{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     text-align: center;
     margin-right: 14rem;
+    justify-content: center;
+    width: 30vw;
 
     .nombreDetail{
         font-size: xx-large;
@@ -36,4 +50,21 @@
         font-size: 2rem;
         font-weight: 600;
     }
+
+    
 }
+
+.linkCarrito{
+
+    text-decoration: none;
+   
+   
+   #botonCarrito{
+       background-color: #FF6699;
+       color: white;
+       font-size: medium;
+       border-radius: 0;
+       width: 200px;
+   }
+   
+   }

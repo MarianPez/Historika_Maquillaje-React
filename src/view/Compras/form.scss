@@ -1,8 +1,12 @@
+.finalizarCompra{
+    height: 75vh;
 .form{
     padding: 0 35vw;
 .divBotonForm{
     padding: 0 1rem;
-
+.button{
+    border: none;
+}
     .botonForm{
         border-radius: 10px;
         height: 5vh;
@@ -10,3 +14,14 @@
 }
 }
 
+}
+
+   #botonForm{
+       background-color: #FF6699;
+       color: white;
+       font-size: medium;
+       border-radius: 0;
+       width: 200px;
+   }
+   
+   

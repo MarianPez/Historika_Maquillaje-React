@@ -34,8 +34,8 @@ agregarAlCarrito(elemento)
       </div>
       <div className="divTexto">
         <h1 className="nombreDetail">{props.nombre}</h1>
-        <h2 className="descripcionDetail">{props.descripcion}</h2>
-        <p className="precioDetail">{props.precio}$</p>
+        <h2 className="descripcionDetail mb-5">{props.descripcion}</h2>
+        <p className="precioDetail mb-5">{props.precio}$</p>
         <Contador stock={props.stock} onAdd={onAdd}></Contador>
         
       </div>
