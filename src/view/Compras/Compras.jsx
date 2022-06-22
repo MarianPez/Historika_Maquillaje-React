@@ -15,7 +15,7 @@ const initialState = {
 
 const date = new Date();
 const outPut =
-  date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+  date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
 
 function Compras() {
   const [values, setValues] = useState(initialState);
